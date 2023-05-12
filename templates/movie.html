@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="padding-top: 100px;"> 
+    <div class="card mb-3" style="width: 100%;">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body" style="padding-top: 50px;">
+            <h5 style="font-size: 30px;" class="card-title">{{ movie.name }}</h5>
+            <p style="font-size: 30px;" class="card-text"><span><strong>Producer: </strong></span>{{ producer.name }}</p>
+            <p style="font-size: 30px;" class="card-text"><span><strong>IMDB: </strong></span>{{ movie.imdb }}</p>
+            <p style="font-size: 30px;" class="card-text"><span><strong>Il: </strong></span>{{ movie.year }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+{% endblock %}

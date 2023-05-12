@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+<br>
+<br>
+	<form action="" method="post" class="ftco-section">
+        {{ form.csrf_token }}
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">RecMovie Form</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div>
+							<div class="col-md-7">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">RecMovie Form</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+									<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+                                                    {{ render_field(form.movie_name)}}
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+                                                    {{ render_field(form.producer)}}
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													{{ render_field(form.year)}}
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+                                                    {{ render_field(form.your_point)}}
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Submit" class="btn btn-primary">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+                        <br>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div>
+			        			<span class="fa fa-map-marker"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div>
+			        			<span class="fa fa-phone"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div>
+			        			<span class="fa fa-paper-plane"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+				          </div>
+			          </div>
+							</div>
+							<div class="col-md-3">
+								<div class="dbox w-100 text-center">
+			        		<div>
+			        			<span class="fa fa-globe"></span>
+			        		</div>
+			        		<div class="text">
+				            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+				          </div>
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+    <br>
+
+{% endblock %}
